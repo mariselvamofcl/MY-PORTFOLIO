@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>MARI SELVAM S | Frontend Developer</title>
+
+  <meta
+    name="description"
+    content="MARI SELVAM S — Frontend Developer building modern, responsive and user-friendly web experiences."
+  >
+
+  <style>
+
+    /* =========================
+       RESET
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050505;
+      color: #ffffff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       FLOWING BACKGROUND
+    ========================== */
+
+    .flowing-background {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .flow {
+      position: absolute;
+
+      width: 170%;
+      height: 430px;
+
+      left: -35%;
+
+      border-radius: 50%;
+
+      filter: blur(10px);
+
+      will-change: transform;
+
+      transition:
+        margin-top 0.15s linear;
+    }
+
+
+    /* =========================
+       WAVE 1
+    ========================== */
+
+    .flow1 {
+      top: 5%;
+
+      background:
+        rgba(167, 25, 66, 0.15);
+
+      animation:
+        waveOne
+        12s
+        ease-in-out
+        infinite
+        alternate;
+    }
+
+
+    /* =========================
+       WAVE 2
+    ========================== */
+
+    .flow2 {
+      top: 35%;
+
+      background:
+        rgba(190, 30, 80, 0.10);
+
+      animation:
+        waveTwo
+        16s
+        ease-in-out
+        infinite
+        alternate;
+    }
+
+
+    /* =========================
+       WAVE 3
+    ========================== */
+
+    .flow3 {
+      top: 65%;
+
+      background:
+        rgba(120, 10, 45, 0.13);
+
+      animation:
+        waveThree
+        20s
+        ease-in-out
+        infinite
+        alternate;
+    }
+
+
+    /* =========================
+       WAVE ANIMATIONS
+    ========================== */
+
+    @keyframes waveOne {
+
+      0% {
+        transform:
+          translateX(-12%)
+          rotate(-5deg)
+          scale(1);
+      }
+
+      50% {
+        transform:
+          translateX(12%)
+          rotate(5deg)
+          scale(1.08);
+      }
+
+      100% {
+        transform:
+          translateX(-5%)
+          rotate(-2deg)
+          scale(1.03);
+      }
+
+    }
+
+
+    @keyframes waveTwo {
+
+      0% {
+        transform:
+          translateX(12%)
+          rotate(5deg)
+          scale(1.05);
+      }
+
+      50% {
+        transform:
+          translateX(-12%)
+          rotate(-5deg)
+          scale(1);
+      }
+
+      100% {
+        transform:
+          translateX(6%)
+          rotate(3deg)
+          scale(1.08);
+      }
+
+    }
+
+
+    @keyframes waveThree {
+
+      0% {
+        transform:
+          translateX(-10%)
+          rotate(-3deg)
+          scale(1);
+      }
+
+      50% {
+        transform:
+          translateX(15%)
+          rotate(4deg)
+          scale(1.07);
+      }
+
+      100% {
+        transform:
+          translateX(-7%)
+          rotate(-2deg)
+          scale(1.03);
+      }
+
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    header {
+      position: fixed;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+
+      z-index: 1000;
+
+      background:
+        rgba(5, 5, 5, 0.72);
+
+      backdrop-filter:
+        blur(18px);
+
+      -webkit-backdrop-filter:
+        blur(18px);
+
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+    }
+
+
+    nav {
+      width:
+        min(1180px, 92%);
+
+      height: 78px;
+
+      margin: auto;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        space-between;
+    }
+
+
+    /* =========================
+       LOGO
+    ========================== */
+
+    .logo {
+      font-size: 20px;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      transition:
+        0.3s ease;
+    }
+
+
+    .logo span {
+      color: #a71942;
+    }
+
+
+    .logo:hover {
+      transform:
+        translateY(-2px);
+
+      text-shadow:
+        0 0 20px
+        rgba(167, 25, 66, 0.45);
+    }
+
+
+    /* =========================
+       NAV LINKS
+    ========================== */
+
+    .nav-links {
+      display: flex;
+
+      gap: 30px;
+
+      list-style: none;
+    }
+
+
+    .nav-links a {
+      color: #cccccc;
+
+      font-size: 14px;
+
+      transition:
+        0.3s ease;
+
+      position: relative;
+    }
+
+
+    .nav-links a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -7px;
+
+      width: 0;
+
+      height: 2px;
+
+      background:
+        #a71942;
+
+      transition:
+        0.3s ease;
+    }
+
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 100vh;
+
+      width:
+        min(1180px, 92%);
+
+      margin: auto;
+
+      display: flex;
+
+      align-items: center;
+
+      position: relative;
+
+      z-index: 2;
+
+      padding-top: 100px;
+    }
+
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+
+    .hello {
+      color: #a71942;
+
+      font-size: 15px;
+
+      font-weight: bold;
+
+      letter-spacing: 4px;
+
+      margin-bottom: 18px;
+
+      animation:
+        fadeUp
+        0.8s
+        ease
+        forwards;
+    }
+
+
+    h1 {
+      font-size:
+        clamp(48px, 8vw, 100px);
+
+      line-height: 0.98;
+
+      letter-spacing: -4px;
+
+      margin-bottom: 25px;
+
+      animation:
+        fadeUp
+        1s
+        ease
+        forwards;
+    }
+
+
+    h1 span {
+      color: #a71942;
+
+      text-shadow:
+        0 0 25px
+        rgba(167, 25, 66, 0.35);
+
+      animation:
+        textGlow
+        4s
+        ease-in-out
+        infinite
+        alternate;
+    }
+
+
+    @keyframes textGlow {
+
+      from {
+        text-shadow:
+          0 0 8px
+          rgba(167, 25, 66, 0.15);
+      }
+
+      to {
+        text-shadow:
+          0 0 35px
+          rgba(167, 25, 66, 0.55);
+      }
+
+    }
+
+
+    .description {
+      max-width: 650px;
+
+      color: #aaaaaa;
+
+      font-size: 18px;
+
+      margin-bottom: 35px;
+
+      animation:
+        fadeUp
+        1.2s
+        ease
+        forwards;
+    }
+
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .buttons {
+      display: flex;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+
+      animation:
+        fadeUp
+        1.4s
+        ease
+        forwards;
+    }
+
+
+    .btn {
+      padding:
+        14px 24px;
+
+      border-radius: 8px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+      font-size: 14px;
+
+      font-weight: bold;
+
+      transition:
+        0.3s ease;
+    }
+
+
+    .primary {
+      background:
+        #a71942;
+
+      border-color:
+        #a71942;
+    }
+
+
+    .btn:hover {
+      transform:
+        translateY(-4px);
+    }
+
+
+    .primary:hover {
+      box-shadow:
+        0 15px 35px
+        rgba(167, 25, 66, 0.35);
+    }
+
+
+    /* =========================
+       SCROLL TEXT
+    ========================== */
+
+    .scroll {
+      position: absolute;
+
+      bottom: 30px;
+
+      color: #666666;
+
+      font-size: 11px;
+
+      letter-spacing: 3px;
+
+      animation:
+        pulse
+        2s
+        ease-in-out
+        infinite;
+    }
+
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 0.4;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+    }
+
+
+    /* =========================
+       FADE UP
+    ========================== */
+
+    @keyframes fadeUp {
+
+      from {
+        opacity: 0;
+
+        transform:
+          translateY(35px);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          translateY(0);
+      }
+
+    }
+
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section:not(.hero) {
+
+      width:
+        min(1180px, 92%);
+
+      margin: auto;
+
+      padding:
+        110px 0;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+
+    .label {
+
+      color: #a71942;
+
+      letter-spacing: 4px;
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+      margin-bottom: 12px;
+    }
+
+
+    .title {
+
+      font-size:
+        clamp(35px, 5vw, 60px);
+
+      line-height: 1;
+
+      margin-bottom: 50px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 60px;
+    }
+
+
+    .about p {
+
+      color: #aaaaaa;
+
+      font-size: 17px;
+
+      margin-bottom: 20px;
+    }
+
+
+    .card {
+
+      padding: 40px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 18px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+      backdrop-filter:
+        blur(8px);
+
+      -webkit-backdrop-filter:
+        blur(8px);
+
+      transition:
+        0.4s ease;
+    }
+
+
+    .card:hover {
+
+      transform:
+        translateY(-8px);
+
+      border-color:
+        rgba(167, 25, 66, 0.5);
+
+      box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.3);
+    }
+
+
+    .card p {
+
+      color: #999999;
+
+      margin-top: 15px;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================== */
+
+    .skills {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 15px;
+    }
+
+
+    .skill {
+
+      padding: 25px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 14px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+      backdrop-filter:
+        blur(8px);
+
+      -webkit-backdrop-filter:
+        blur(8px);
+
+      transition:
+        0.35s ease;
+    }
+
+
+    .skill:hover {
+
+      transform:
+        translateY(-7px);
+
+      background:
+        rgba(167, 25, 66, 0.08);
+
+      border-color:
+        rgba(167, 25, 66, 0.5);
+    }
+
+
+    .skill span {
+
+      display: block;
+
+      color: #777777;
+
+      font-size: 13px;
+
+      margin-top: 5px;
+    }
+
+
+    /* =========================
+       PROJECT
+    ========================== */
+
+    .project {
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      border-radius: 22px;
+
+      overflow: hidden;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+      backdrop-filter:
+        blur(10px);
+
+      -webkit-backdrop-filter:
+        blur(10px);
+
+      transition:
+        0.45s ease;
+    }
+
+
+    .project:hover {
+
+      transform:
+        translateY(-8px);
+
+      border-color:
+        rgba(167, 25, 66, 0.5);
+
+      box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.3);
+    }
+
+
+    .project-top {
+
+      min-height: 280px;
+
+      padding: 45px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: flex-end;
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(167, 25, 66, 0.35),
+          transparent 35%
+        ),
+        #111111;
+    }
+
+
+    .project-top small {
+
+      color: #d94d76;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 12px;
+    }
+
+
+    .project-top h3 {
+
+      font-size: 42px;
+    }
+
+
+    .project-bottom {
+
+      padding:
+        35px 45px 45px;
+    }
+
+
+    .project-bottom p {
+
+      color: #999999;
+
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+
+      padding: 65px;
+
+      text-align: center;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 24px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+      backdrop-filter:
+        blur(12px);
+
+      -webkit-backdrop-filter:
+        blur(12px);
+    }
+
+
+    .contact h2 {
+
+      font-size:
+        clamp(35px, 6vw, 65px);
+
+      margin-bottom: 18px;
+    }
+
+
+    .contact p {
+
+      color: #999999;
+
+      max-width: 600px;
+
+      margin:
+        auto auto 30px;
+    }
+
+
+    .socials {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+    }
+
+
+    .social {
+
+      padding:
+        12px 20px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+      border-radius: 8px;
+
+      transition:
+        0.3s ease;
+    }
+
+
+    .social:hover {
+
+      color: #ffffff;
+
+      border-color:
+        #a71942;
+
+      transform:
+        translateY(-4px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+
+      position: relative;
+
+      z-index: 2;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+      padding:
+        30px 4%;
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      color: #666666;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================== */
+
+    .reveal {
+
+      opacity: 0;
+
+      transform:
+        translateY(40px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+
+    .reveal.show {
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 800px) {
+
+      nav {
+        height: 70px;
+      }
+
+
+      .nav-links {
+        gap: 12px;
+      }
+
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+
+      .hero {
+        min-height: 90vh;
+      }
+
+
+      .hero h1 {
+        font-size:
+          clamp(46px, 14vw, 75px);
+
+        letter-spacing: -3px;
+      }
+
+
+      .description {
+        font-size: 16px;
+      }
+
+
+      .about {
+        grid-template-columns:
+          1fr;
+
+        gap: 30px;
+      }
+
+
+      .skills {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .project-top h3 {
+        font-size: 34px;
+      }
+
+
+      .contact {
+        padding:
+          40px 25px;
+      }
+
+
+      footer {
+
+        flex-direction:
+          column;
+
+        text-align:
+          center;
+
+        gap: 10px;
+      }
+
+
+      .flow {
+        width: 230%;
+
+        left: -65%;
+      }
+
+    }
+
+
+    @media (max-width: 520px) {
+
+      .logo {
+        font-size: 17px;
+      }
+
+
+      .nav-links {
+        gap: 10px;
+      }
+
+
+      .nav-links a:nth-child(2) {
+        display: none;
+      }
+
+
+      .hero-buttons {
+        flex-direction:
+          column;
+
+        align-items:
+          flex-start;
+      }
+
+
+      .btn {
+        width: 100%;
+
+        text-align:
+          center;
+      }
+
+
+      .skills {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .project-top {
+
+        min-height: 220px;
+
+        padding: 30px;
+      }
+
+
+      .project-bottom {
+
+        padding: 30px;
+      }
+
+
+      section:not(.hero) {
+
+        padding:
+          80px 0;
+      }
+
+
+      .flow {
+
+        width: 300%;
+
+        left: -100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =================================
+       ANIMATED FLOWING BACKGROUND
+  ================================== -->
+
+  <div class="flowing-background">
+
+    <div class="flow flow1"></div>
+
+    <div class="flow flow2"></div>
+
+    <div class="flow flow3"></div>
+
+  </div>
+
+
+  <!-- =================================
+       NAVBAR
+  ================================== -->
+
+  <header>
+
+    <nav>
+
+      <a
+        href="#home"
+        class="logo"
+      >
+        MARI S<span></span>
+      </a>
+
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="#home">
+            Home
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#about">
+            About
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#skills">
+            Skills
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#projects">
+            Projects
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#contact">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =================================
+       HERO
+  ================================== -->
+
+  <section
+    class="hero"
+    id="home"
+  >
+
+    <div class="hero-content">
+
+
+      <div class="hello">
+        HELLO, I'M
+      </div>
+
+
+      <h1>
+
+        MARI<br>
+
+        <span>
+          SELVAM.
+        </span>
+
+      </h1>
+
+
+      <p class="description">
+
+        Frontend Developer focused on building modern,
+        responsive and user-friendly web experiences.
+
+      </p>
+
+
+      <div class="buttons">
+
+
+        <a
+          href="#projects"
+          class="btn primary"
+        >
+          View My Work
+        </a>
+
+
+        <a
+          href="#contact"
+          class="btn"
+        >
+          Contact Me
+        </a>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="scroll">
+
+      SCROLL TO EXPLORE ↓
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================
+       ABOUT
+  ================================== -->
+
+  <section
+    id="about"
+    class="reveal"
+  >
+
+
+    <div class="label">
+
+      About Me
+
+    </div>
+
+
+    <h2 class="title">
+
+      Building ideas<br>
+
+      into experiences.
+
+    </h2>
+
+
+    <div class="about">
+
+
+      <div>
+
+
+        <p>
+
+          I’m a passionate web developer focused on building
+          modern, responsive and user-friendly websites.
+
+        </p>
+
+
+        <p>
+
+          I enjoy turning ideas into clean and interactive web
+          experiences using HTML, CSS and JavaScript.
+
+        </p>
+
+
+        <p>
+
+          I’m continuously improving my frontend development
+          skills by building real-world projects.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="card">
+
+
+        <h3>
+
+          My Approach
+
+        </h3>
+
+
+        <p>
+
+          I believe a good website should look modern,
+          feel smooth, work across devices and provide
+          a simple user experience.
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================
+       SKILLS
+  ================================== -->
+
+  <section
+    id="skills"
+    class="reveal"
+  >
+
+
+    <div class="label">
+
+      Skills
+
+    </div>
+
+
+    <h2 class="title">
+
+      What I work with.
+
+    </h2>
+
+
+    <div class="skills">
+
+
+      <div class="skill">
+
+        <strong>
+          HTML5
+        </strong>
+
+        <span>
+          Semantic Web Structure
+        </span>
+
+      </div>
+
+
+      <div class="skill">
+
+        <strong>
+          CSS3
+        </strong>
+
+        <span>
+          Modern UI & Responsive Design
+        </span>
+
+      </div>
+
+
+      <div class="skill">
+
+        <strong>
+          JavaScript
+        </strong>
+
+        <span>
+          Interactive Web Experiences
+        </span>
+
+      </div>
+
+
+      <div class="skill">
+
+        <strong>
+          Responsive Design
+        </strong>
+
+        <span>
+          Mobile & Desktop Layouts
+        </span>
+
+      </div>
+
+
+      <div class="skill">
+
+        <strong>
+          Git
+        </strong>
+
+        <span>
+          Version Control
+        </span>
+
+      </div>
+
+
+      <div class="skill">
+
+        <strong>
+          GitHub
+        </strong>
+
+        <span>
+          Project Management
+        </span>
+
+      </div>
+
+
+      <div class="skill">
+
+        <strong>
+          Web Development
+        </strong>
+
+        <span>
+          Frontend Development
+        </span>
+
+      </div>
+
+
+      <div class="skill">
+
+        <strong>
+          UI Design
+        </strong>
+
+        <span>
+          User-Friendly Interfaces
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================
+       PROJECT
+  ================================== -->
+
+  <section
+    id="projects"
+    class="reveal"
+  >
+
+
+    <div class="label">
+
+      Featured Project
+
+    </div>
+
+
+    <h2 class="title">
+
+      Things I've built.
+
+    </h2>
+
+
+    <div class="project">
+
+
+      <div class="project-top">
+
+
+        <small>
+
+          FASHION • E-COMMERCE
+
+        </small>
+
+
+        <h3>
+
+          OFFSTITCH
+
+        </h3>
+
+
+      </div>
+
+
+      <div class="project-bottom">
+
+
+        <p>
+
+          A modern, responsive unisex fashion e-commerce website
+          built with HTML, CSS and JavaScript.
+
+        </p>
+
+
+        <div class="buttons">
+
+
+          <a
+            href="https://offstitch.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn primary"
+          >
+
+            Live Website ↗
+
+          </a>
+
+
+          <a
+            href="https://github.com/mariselvamofcl/OFFSTITCH"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+          >
+
+            GitHub ↗
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================
+       CONTACT
+  ================================== -->
+
+  <section
+    id="contact"
+    class="reveal"
+  >
+
+
+    <div class="contact">
+
+
+      <div class="label">
+
+        Get In Touch
+
+      </div>
+
+
+      <h2>
+
+        Let's build<br>
+
+        something great.
+
+      </h2>
+
+
+      <p>
+
+        I'm always interested in learning, building meaningful
+        projects and growing as a developer.
+
+      </p>
+
+
+      <div class="socials">
+
+
+        <a
+          href="https://github.com/mariselvamofcl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social"
+        >
+
+          GitHub ↗
+
+        </a>
+
+
+        <a
+          href="https://www.linkedin.com/in/mari-selvam-s-1992582a5"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social"
+        >
+
+          LinkedIn ↗
+
+        </a>
+
+
+        <a
+          href="https://offstitch.netlify.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social"
+        >
+
+          OFFSTITCH ↗
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================
+       FOOTER
+  ================================== -->
+
+  <footer>
+
+    <div>
+
+      © 2026 MARI SELVAM S
+
+    </div>
+
+
+    <div>
+
+      Frontend Developer
+
+    </div>
+
+  </footer>
+
+
+  <!-- =================================
+       JAVASCRIPT
+  ================================== -->
+
+  <script>
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("show");
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.15
+        }
+
+      );
+
+
+    revealElements.forEach((element) => {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* =========================
+       SCROLL WAVE MOVEMENT
+    ========================== */
+
+    let currentScroll = 0;
+
+    let targetScroll = 0;
+
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        targetScroll =
+          window.scrollY;
+
+      },
+      {
+        passive: true
+      }
+    );
+
+
+    function animateScrollWave() {
+
+      currentScroll +=
+        (targetScroll - currentScroll)
+        * 0.08;
+
+
+      const wave1 =
+        document.querySelector(".flow1");
+
+      const wave2 =
+        document.querySelector(".flow2");
+
+      const wave3 =
+        document.querySelector(".flow3");
+
+
+      if (wave1) {
+
+        wave1.style.marginTop =
+          `${currentScroll * 0.08}px`;
+
+      }
+
+
+      if (wave2) {
+
+        wave2.style.marginTop =
+          `${currentScroll * -0.05}px`;
+
+      }
+
+
+      if (wave3) {
+
+        wave3.style.marginTop =
+          `${currentScroll * 0.03}px`;
+
+      }
+
+
+      requestAnimationFrame(
+        animateScrollWave
+      );
+
+    }
+
+
+    animateScrollWave();
+
+
+    /* =========================
+       MOUSE MOVEMENT
+    ========================== */
+
+    document.addEventListener(
+      "mousemove",
+      (event) => {
+
+        const x =
+          (event.clientX /
+            window.innerWidth -
+            0.5) * 10;
+
+
+        const y =
+          (event.clientY /
+            window.innerHeight -
+            0.5) * 10;
+
+
+        const waves =
+          document.querySelectorAll(
+            ".flow"
+          );
+
+
+        waves.forEach(
+          (wave, index) => {
+
+            const amount =
+              (index + 1) * 0.4;
+
+
+            wave.style.setProperty(
+              "--mouse-x",
+              `${x * amount}px`
+            );
+
+
+            wave.style.setProperty(
+              "--mouse-y",
+              `${y * amount}px`
+            );
+
+          }
+        );
+
+      }
+    );
+
+
+  </script>
+
+
+</body>
+
+</html>
