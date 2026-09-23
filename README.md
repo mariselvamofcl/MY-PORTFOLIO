@@ -49,22 +49,11 @@ portfolio/
    npx serve .
    ```
 
-### Deploy on Netlify
-
-1. Push the repo to GitHub.
-2. On [Netlify](https://netlify.com), select **Add new site → Import an existing project**.
-3. Connect the GitHub repository.
-4. Leave the build command empty and set the publish directory to `.` (root) — it's a static site.
-5. Deploy.
-
 ## 📬 Connect With Me
 
 - GitHub: [@mariselvamofcl](https://github.com/mariselvamofcl)
 - LinkedIn: [Mari Selvam S](https://www.linkedin.com/in/mari-selvam-s-1992582a5)
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
