@@ -39,16 +39,6 @@ portfolio/
 
 ### Run Locally
 
-1. Clone the repository
-   ```bash
-   git clone https://github.com/mariselvamofcl/<repo-name>.git
-   cd <repo-name>
-   ```
-2. Open `index.html` directly in your browser, or serve it locally:
-   ```bash
-   npx serve .
-   ```
-
 ## 📬 Connect With Me
 
 - GitHub: [@mariselvamofcl](https://github.com/mariselvamofcl)
